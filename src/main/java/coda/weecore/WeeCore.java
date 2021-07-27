@@ -1,5 +1,8 @@
 package coda.weecore;
 
+import coda.weecore.common.entities.companion.DragonCompanionEntity;
+import coda.weecore.init.WCEntities;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -16,5 +19,10 @@ public class WeeCore {
     public WeeCore() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        WCEntities.REGISTER.register(bus);
+    }
+
+    private void registerEntityAttributes(EntityAttributeCreationEvent event) {
+        event.put(WCEntities.DRAGON_COMPANION.get(), DragonCompanionEntity.createAttributes().build());
     }
 }

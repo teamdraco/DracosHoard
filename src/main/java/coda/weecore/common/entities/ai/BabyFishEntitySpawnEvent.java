@@ -1,4 +1,4 @@
-package coda.weecore.common;
+package coda.weecore.common.entities.ai;
 
 import coda.weecore.common.entities.AbstractBreedableFishEntity;
 import net.minecraft.entity.AgeableEntity;

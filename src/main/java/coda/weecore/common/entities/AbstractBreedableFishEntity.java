@@ -1,6 +1,6 @@
 package coda.weecore.common.entities;
 
-import coda.weecore.common.BabyFishEntitySpawnEvent;
+import coda.weecore.common.entities.ai.BabyFishEntitySpawnEvent;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ILivingEntityData;
@@ -58,10 +58,6 @@ public abstract class AbstractBreedableFishEntity extends AbstractFishEntity {
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_BABY_ID, false);
-    }
-
-    public boolean canBreed() {
-        return false;
     }
 
     public int getAge() {

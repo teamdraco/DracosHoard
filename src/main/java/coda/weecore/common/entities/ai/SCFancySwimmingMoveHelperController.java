@@ -5,10 +5,10 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.controller.MovementController;
 import net.minecraft.util.math.MathHelper;
 
-public class SwimmingTiltingMoveHelperController extends MovementController {
+public class SCFancySwimmingMoveHelperController extends MovementController {
     private final MobEntity entity;
 
-    public SwimmingTiltingMoveHelperController(MobEntity entity) {
+    public SCFancySwimmingMoveHelperController(MobEntity entity) {
         super(entity);
         this.entity = entity;
     }

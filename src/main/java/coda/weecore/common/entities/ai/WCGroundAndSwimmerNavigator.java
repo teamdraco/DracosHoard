@@ -9,8 +9,8 @@ import net.minecraft.pathfinding.WalkAndSwimNodeProcessor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class GroundAndSwimmerNavigator extends SwimmerPathNavigator {
-    public GroundAndSwimmerNavigator(MobEntity entity, World world) {
+public class WCGroundAndSwimmerNavigator extends SwimmerPathNavigator {
+    public WCGroundAndSwimmerNavigator(MobEntity entity, World world) {
         super(entity, world);
     }
 

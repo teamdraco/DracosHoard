@@ -44,7 +44,7 @@ public class WeeRenderLayer<T extends PlayerEntity> extends LayerRenderer<T, Pla
         ms.mulPose(Vector3f.YP.rotation(x));
 
         IVertexBuilder ivertexbuilder = buffer.getBuffer(this.model.renderType(TEXTURE));
-        this.model.body.render(ms, ivertexbuilder, p_229136_3_, OverlayTexture.NO_OVERLAY);
+        this.model.bone.render(ms, ivertexbuilder, p_229136_3_, OverlayTexture.NO_OVERLAY);
         ms.popPose();
     }
 

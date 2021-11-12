@@ -8,10 +8,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
 public class WeeModel<T extends Entity> extends EntityModel<T> {
-    private final ModelRenderer bone;
-    private final ModelRenderer bone2;
-    private final ModelRenderer bone3;
-    private final ModelRenderer bone4;
+    public final ModelRenderer bone;
+    public final ModelRenderer bone2;
+    public final ModelRenderer bone3;
+    public final ModelRenderer bone4;
 
     public WeeModel() {
         texWidth = 32;

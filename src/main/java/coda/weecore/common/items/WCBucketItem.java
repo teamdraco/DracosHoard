@@ -38,11 +38,7 @@ public class WCBucketItem extends BucketItem {
     private final Supplier<? extends Fluid> fluid;
     private final Item item;
 
-    public WCBucketItem(Supplier<? extends EntityType<?>> entityType, Supplier<? extends Fluid> fluid, Item item, Properties builder) {
-        this(entityType, fluid, item, builder,true);
-    }
-
-    public WCBucketItem(Supplier<? extends EntityType<?>> entityType, Supplier<? extends Fluid> fluid, Item item, Properties builder, boolean hasTooltip) {
+    public WCBucketItem(Supplier<? extends EntityType<?>> entityType, Supplier<? extends Fluid> fluid, Item item, boolean hasTooltip, Properties builder) {
         super(fluid, builder);
         this.fluid = fluid;
         this.hasTooltip = hasTooltip;

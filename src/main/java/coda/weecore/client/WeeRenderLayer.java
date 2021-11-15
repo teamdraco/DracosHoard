@@ -55,7 +55,12 @@ public class WeeRenderLayer<T extends PlayerEntity> extends LayerRenderer<T, Pla
     }
 
     public static void addUUIDs() {
-        list.add(UUID.fromString("526ab88d-f353-4421-9d18-a629f735ac47"));
+        list.add(UUID.fromString("526ab88d-f353-4421-9d18-a629f735ac47")); // Coda
+        list.add(UUID.fromString("2d173722-de6b-4bb8-b21b-b2843cfe395d")); // Ninni
+        list.add(UUID.fromString("cc14fbdd-6b9b-42b7-a171-564860591cc5")); // Zae
+        list.add(UUID.fromString("c92ed179-b1eb-4254-a4f8-590beecd2b0d")); // Esuoh
+        list.add(UUID.fromString("aca529a2-1166-41aa-b304-209f06831998")); // Tazz
+        list.add(UUID.fromString("0c22615f-a189-4f4e-85ae-79fd80c353c8")); // Vaky
     }
 
     public static boolean isSupporter(PlayerEntity entity) {

@@ -6,6 +6,7 @@ modId="weecore" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="Wee Core" #mandatory
 logoFile="weecore.png" #optional
+creduts="George K" #optional
 authors="Coda" #optional
 description='''
 Wee Core is a library used by all Team Draco mods, as well as a few others.'''

@@ -33,22 +33,18 @@ public class WeeRenderLayer<T extends PlayerEntity> extends LayerRenderer<T, Pla
     private void render(MatrixStack ms, IRenderTypeBuffer buffer, int p_229136_3_, T entity, float p_225628_5_) {
         ms.pushPose();
 
-        float f = (float)entity.tickCount + p_225628_5_;
+        float rotation = entity.tickCount % 360;
 
-        float x = MathHelper.sin(f * 0.15F);
-        float y = MathHelper.sin(f * 0.1F) * 0.5F;
-        float z = MathHelper.cos(f * 0.15F);
+        float x = MathHelper.sin(rotation * 0.15F);
+        float y = MathHelper.sin(rotation * 0.1F) * 0.5F;
+        float z = MathHelper.cos(rotation * 0.15F);
 
         ms.translate(x, y - 1, z);
 
-        ms.mulPose(Vector3f.YP.rotation(x));
+        ms.mulPose(Vector3f.YP.rotation((float) ((rotation * 0.15f) + Math.toRadians(270))));
 
         IVertexBuilder ivertexbuilder = buffer.getBuffer(this.model.renderType(TEXTURE));
         this.model.bone.render(ms, ivertexbuilder, p_229136_3_, OverlayTexture.NO_OVERLAY);
         ms.popPose();
-    }
-
-    protected float getBob(T p_77044_1_, float p_77044_2_) {
-        return (float)p_77044_1_.tickCount + p_77044_2_;
     }
 }

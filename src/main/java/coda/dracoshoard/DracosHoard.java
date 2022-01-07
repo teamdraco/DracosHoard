@@ -10,6 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 @Mod(DracosHoard.MOD_ID)
 @Mod.EventBusSubscriber(modid = DracosHoard.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -23,6 +24,8 @@ public class DracosHoard {
 
         bus.addListener(this::commonSetup);
         forgeBus.addListener(this::reloadListener);
+
+        GeckoLib.initialize();
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

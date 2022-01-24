@@ -74,9 +74,9 @@ configurations {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.10'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.59'
 
-    shade fg.deobf('software.bernie.geckolib:geckolib-1.18:3.0.0')
+    shade fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.7')
 }
 
 shadowJar {
@@ -87,7 +87,7 @@ shadowJar {
     exclude 'assets/geckolib3/**'
     exclude '**/*.java'
 
-    relocate 'software.bernie.geckolib', 'software.bernie.finsandtails.geckolib'
+    relocate 'software.bernie.geckolib', 'software.bernie.dracoshoard.geckolib'
 
     classifier ''
 

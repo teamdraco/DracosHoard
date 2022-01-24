@@ -26,13 +26,11 @@ public class CommonEvents {
         InputStream in;
 
         try {
-            if (!player.level.isClientSide) {
-                in = new URL("https://github.com/teamdraco/DracosHoard/blob/master/supporters.txt").openStream();
-                List<String> contents = IOUtils.readLines(in, StandardCharsets.UTF_8);
-                for (String line : contents) {
-                    if (player.getUUID().toString().replaceAll("-", "").equals(line.replaceAll("-", ""))) {
-                        return true;
-                    }
+            in = new URL("https://github.com/teamdraco/DracosHoard/blob/master/supporters.txt").openStream();
+            List<String> contents = IOUtils.readLines(in, StandardCharsets.UTF_8);
+            for (String line : contents) {
+                if (player.getUUID().toString().replaceAll("-", "").equals(line.replaceAll("-", ""))) {
+                    return true;
                 }
             }
         } catch (IOException exception) {

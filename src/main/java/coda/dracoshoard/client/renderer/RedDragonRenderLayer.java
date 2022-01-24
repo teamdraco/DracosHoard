@@ -1,8 +1,9 @@
 package coda.dracoshoard.client.renderer;
 
 import coda.dracoshoard.DracosHoard;
-import coda.dracoshoard.client.ClientSetup;
+import coda.dracoshoard.client.ClientEvents;
 import coda.dracoshoard.client.models.WeeModel;
+import coda.dracoshoard.common.CommonEvents;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
@@ -18,10 +19,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-
 @OnlyIn(Dist.CLIENT)
 public class RedDragonRenderLayer<T extends Player> extends RenderLayer<T, PlayerModel<T>> {
     private final WeeModel<Entity> model = new WeeModel<>(WeeModel.createLayerDefinition().bakeRoot());
@@ -32,7 +29,7 @@ public class RedDragonRenderLayer<T extends Player> extends RenderLayer<T, Playe
     }
 
     public void render(PoseStack ms, MultiBufferSource buffer, int p_225628_3_, T entity, float p_225628_5_, float p_225628_6_, float p_225628_7_, float p_225628_8_, float p_225628_9_, float p_225628_10_) {
-        if (ClientSetup.isSupporter(entity) && ClientSetup.modelToRender().equals("red_dragon")) {
+        if (CommonEvents.isSupporter(entity)) {
             this.render(ms, buffer, p_225628_3_, entity);
         }
     }
